@@ -44,12 +44,18 @@ This system combines advanced computational methods with moral foundations theor
 
 ## 🚀 Quick Start
 
-### Google Colab (Recommended)
+### Option 1: Streamlit Cloud (Recommended for Public Deployment)
+1. Fork this repository
+2. Go to [Streamlit Cloud](https://streamlit.io/cloud)
+3. Deploy from your fork
+4. Get instant public URL
+
+### Option 2: Google Colab (Recommended for Testing)
 1. Click the "Open in Colab" badge above
 2. Run all cells (Runtime → Run all)
 3. Access via ngrok URL (automatically generated)
 
-### Local Installation
+### Option 3: Local Installation
 
 ```bash
 # Clone the repository
@@ -66,6 +72,8 @@ pip install -r requirements.txt
 # Run the application
 streamlit run app.py
 ```
+
+The application will open at `http://localhost:8501`
 
 ## 📋 Requirements
 
