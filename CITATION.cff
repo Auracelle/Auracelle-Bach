@@ -1,0 +1,89 @@
+cff-version: 1.2.0
+message: "If you use Auracelle Bach or the E-AGPO-HT framework in your research, please cite as below."
+type: software
+
+title: "Auracelle Bach: E-AGPO-HT Complete Mathematical Intelligence Suite for AI Governance"
+version: "3.0.0"
+date-released: "2026-02-09"
+license: MIT
+
+authors:
+  - family-names: "Evans"
+    given-names: "Grace A."
+    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
+    affiliation: "Auracelle AI Governance Labs"
+    email: "grace@auracelle.ai"
+
+abstract: >
+  Auracelle Bach operationalises the proprietary E-AGPO-HT (Evans AI Governance Policy 
+  Optimization – Hierarchical Theory) framework through a 10-enhancement mathematical 
+  intelligence architecture. The system provides quantitative simulation of international 
+  AI governance convergence using Bayesian inference, Kalman filtering, reinforcement 
+  learning, Pareto optimization, network diffusion, cognitive foresight modelling, and 
+  a Cambridge-integrated cognitive architecture (Haidt Moral Foundations Theory; 
+  Ostrom/Axelrod Trust Dynamics). Bach targets academic, civil society, and institutional 
+  audiences including NATO, UN WSIS+20, WEF, and NIST.
+
+repository-code: "https://github.com/auracelle/Auracelle-Bach"
+url: "https://auracelle-bach-ver3.streamlit.app"
+
+keywords:
+  - AI governance
+  - policy optimization
+  - wargaming
+  - E-AGPO-HT
+  - Bayesian inference
+  - cognitive architecture
+  - moral foundations
+  - trust dynamics
+  - multi-stakeholder simulation
+  - international policy convergence
+  - Streamlit
+  - Python
+
+references:
+  - type: article
+    title: "Governing the Commons: The Evolution of Institutions for Collective Action"
+    authors:
+      - family-names: "Ostrom"
+        given-names: "Elinor"
+    year: 1990
+    publisher:
+      name: "Cambridge University Press"
+
+  - type: article
+    title: "The Evolution of Cooperation"
+    authors:
+      - family-names: "Axelrod"
+        given-names: "Robert"
+    year: 1984
+    publisher:
+      name: "Basic Books"
+
+  - type: article
+    title: "The Righteous Mind: Why Good People are Divided by Politics and Religion"
+    authors:
+      - family-names: "Haidt"
+        given-names: "Jonathan"
+    year: 2012
+    publisher:
+      name: "Pantheon Books"
+
+  - type: article
+    title: "Bounded Rationality"
+    authors:
+      - family-names: "Simon"
+        given-names: "Herbert A."
+    year: 1982
+    publisher:
+      name: "MIT Press"
+
+preferred-citation:
+  type: software
+  title: "Auracelle Bach: E-AGPO-HT Complete Mathematical Intelligence Suite"
+  authors:
+    - family-names: "Evans"
+      given-names: "Grace A."
+  year: 2026
+  version: "3.0.0"
+  url: "https://auracelle-bach-ver3.streamlit.app"
