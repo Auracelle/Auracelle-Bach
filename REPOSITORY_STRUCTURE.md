@@ -1,306 +1,150 @@
-# Auracelle Bach - Repository Structure
+# Repository Structure — Auracelle Bach
 
-This document outlines the complete structure of the Auracelle Bach GitHub repository.
-
-## 📁 Root Directory
-
-```
-auracelle-bach/
-├── .github/                          # GitHub configuration
-│   ├── workflows/                    # CI/CD workflows
-│   │   └── ci.yml                   # Continuous integration
-│   ├── ISSUE_TEMPLATE/              # Issue templates
-│   │   ├── bug_report.md            # Bug report template
-│   │   └── feature_request.md       # Feature request template
-│   └── PULL_REQUEST_TEMPLATE.md     # PR template
-│
-├── .env.example                      # Environment variable template
-├── .gitignore                        # Git ignore patterns
-├── CHANGELOG.md                      # Version history
-├── CITATION.cff                      # Academic citation metadata
-├── CODE_OF_CONDUCT.md               # Community guidelines
-├── CONTRIBUTING.md                   # Contribution guidelines
-├── deploy.sh                         # Quick deployment script
-├── GITHUB_SETUP.md                  # GitHub setup instructions
-├── INSTALLATION.md                   # Installation guide
-├── LICENSE                          # MIT License
-├── README.md                        # Main documentation
-├── requirements.txt                  # Python dependencies
-├── SECURITY.md                      # Security policy
-└── CHIA_PERFECT_01_17_25_AURACELLE_BACH_3_D_BEHAVIOR_AND_COGNITIVE_INTEGRATED.ipynb
-                                     # Main Jupyter notebook
-```
-
-## 📄 File Descriptions
-
-### Core Files
-
-#### `README.md`
-- **Purpose**: Main entry point for repository visitors
-- **Contents**:
-  - Project overview and features
-  - Quick start instructions
-  - Installation options
-  - Usage examples
-  - Architecture description
-  - Citation information
-  - Contact details
-
-#### `CHIA_PERFECT_01_17_25_AURACELLE_BACH_3_D_BEHAVIOR_AND_COGNITIVE_INTEGRATED.ipynb`
-- **Purpose**: Main Jupyter notebook containing complete Auracelle Bach implementation
-- **Features**:
-  - 9 mathematical intelligence enhancements
-  - 9 behavioral science dimensions
-  - Live API integrations
-  - Streamlit interface
-  - Google Colab ready
-  - Comprehensive documentation
-
-#### `requirements.txt`
-- **Purpose**: Python package dependencies
-- **Key Dependencies**:
-  - streamlit >= 1.28.0
-  - pandas >= 2.0.0
-  - numpy >= 1.24.0
-  - plotly >= 5.17.0
-  - networkx >= 3.1
-  - scikit-learn >= 1.3.0
-
-### Configuration Files
-
-#### `.env.example`
-- **Purpose**: Template for environment variables
-- **Contents**:
-  - API keys (World Bank, OECD, Privacy International)
-  - Ngrok configuration
-  - Streamlit settings
-  - Application configuration
-  - Security settings
-  - Logging configuration
-
-#### `.gitignore`
-- **Purpose**: Specify files to exclude from Git
-- **Exclusions**:
-  - Python cache files
-  - Virtual environments
-  - Jupyter checkpoints
-  - Environment files (.env)
-  - API keys and secrets
-  - OS-specific files
-
-### Documentation Files
-
-#### `INSTALLATION.md`
-- **Purpose**: Detailed installation instructions
-- **Contents**:
-  - Prerequisites
-  - Multiple installation options (Colab, local, Docker)
-  - Configuration guide
-  - Troubleshooting
-  - Platform-specific notes
-
-#### `CONTRIBUTING.md`
-- **Purpose**: Guide for contributors
-- **Contents**:
-  - How to contribute
-  - Code standards
-  - Development setup
-  - Pull request process
-  - Research ethics
-
-#### `GITHUB_SETUP.md`
-- **Purpose**: Step-by-step GitHub repository creation
-- **Contents**:
-  - Repository creation
-  - Initial commit and push
-  - Settings configuration
-  - Release management
-  - Promotion strategies
-
-#### `SECURITY.md`
-- **Purpose**: Security policies and practices
-- **Contents**:
-  - Vulnerability reporting
-  - Security best practices
-  - Supported versions
-  - Compliance guidelines
-
-#### `CODE_OF_CONDUCT.md`
-- **Purpose**: Community standards
-- **Contents**:
-  - Behavioral expectations
-  - Research ethics
-  - Enforcement guidelines
-  - Reporting procedures
-
-#### `CHANGELOG.md`
-- **Purpose**: Track version history
-- **Contents**:
-  - Version releases
-  - Added features
-  - Bug fixes
-  - Breaking changes
-  - Upgrade guides
-
-### Academic Files
-
-#### `CITATION.cff`
-- **Purpose**: Standardized citation metadata
-- **Format**: Citation File Format (CFF)
-- **Contents**:
-  - Author information
-  - Version details
-  - Repository URLs
-  - Keywords and abstract
-
-#### `LICENSE`
-- **Purpose**: Software license
-- **Type**: MIT License
-- **Rights**: Open source with attribution
-
-### Automation Files
-
-#### `deploy.sh`
-- **Purpose**: Quick deployment script (Unix/Linux/macOS)
-- **Functions**:
-  - Check Python version
-  - Create virtual environment
-  - Install dependencies
-  - Launch Streamlit
-
-#### `.github/workflows/ci.yml`
-- **Purpose**: Continuous Integration
-- **Actions**:
-  - Test on multiple Python versions
-  - Lint code
-  - Validate notebook
-  - Check imports
-
-### GitHub Templates
-
-#### `.github/ISSUE_TEMPLATE/bug_report.md`
-- **Purpose**: Standardize bug reports
-- **Sections**:
-  - Bug description
-  - Reproduction steps
-  - Expected behavior
-  - Environment details
-  - Error messages
-
-#### `.github/ISSUE_TEMPLATE/feature_request.md`
-- **Purpose**: Standardize feature requests
-- **Sections**:
-  - Feature description
-  - Motivation
-  - Proposed solution
-  - Research use case
-  - Priority assessment
-
-#### `.github/PULL_REQUEST_TEMPLATE.md`
-- **Purpose**: Standardize pull requests
-- **Sections**:
-  - Change description
-  - Type of change
-  - Testing details
-  - Checklist
-  - Research impact
-
-## 🎯 Key Features by File
-
-### Research Capabilities
-- **Notebook**: Complete analytical suite
-- **README**: Usage documentation
-- **CITATION**: Academic attribution
-
-### Development Support
-- **requirements.txt**: Dependency management
-- **deploy.sh**: Quick start
-- **CI workflow**: Automated testing
-- **CONTRIBUTING**: Developer guide
-
-### Community Engagement
-- **CODE_OF_CONDUCT**: Standards
-- **Templates**: Structured feedback
-- **SECURITY**: Safe practices
-
-### Institutional Credibility
-- **CHANGELOG**: Version tracking
-- **LICENSE**: Legal clarity
-- **Documentation**: Comprehensive guides
-
-## 🚀 Getting Started Files
-
-For different user types, start with these files:
-
-### New Users
-1. **README.md** - Project overview
-2. **INSTALLATION.md** - Setup guide
-3. **Notebook** - Open in Colab and run
-
-### Contributors
-1. **CONTRIBUTING.md** - Contribution guide
-2. **CODE_OF_CONDUCT.md** - Community standards
-3. **GITHUB_SETUP.md** - Repository workflow
-
-### Researchers
-1. **README.md** - Research capabilities
-2. **CITATION.cff** - How to cite
-3. **Notebook** - Analytical methods
-
-### Deployers
-1. **INSTALLATION.md** - Deployment options
-2. **.env.example** - Configuration
-3. **deploy.sh** - Quick start script
-
-## 📊 File Statistics
-
-- **Total Files**: 20+ files
-- **Documentation**: 10 markdown files
-- **Configuration**: 5 config files
-- **Templates**: 3 GitHub templates
-- **Scripts**: 1 deployment script
-- **Workflows**: 1 CI/CD workflow
-- **Notebook**: 1 comprehensive implementation
-
-## 🔄 Maintenance Files
-
-These files require regular updates:
-
-- **CHANGELOG.md**: After each release
-- **requirements.txt**: When adding dependencies
-- **README.md**: When adding features
-- **SECURITY.md**: When policies change
-- **Notebook**: Core development updates
-
-## 📞 Support Resources
-
-- **INSTALLATION.md**: Technical setup issues
-- **CONTRIBUTING.md**: Development questions
-- **SECURITY.md**: Security concerns
-- **Issue templates**: Bug reports and features
-- **CODE_OF_CONDUCT**: Community issues
-
-## 🎓 Academic Integration
-
-Files supporting academic use:
-
-- **CITATION.cff**: Standardized citations
-- **LICENSE**: Usage rights
-- **README.md**: Methodology overview
-- **Notebook**: Research implementation
-- **CHANGELOG.md**: Version provenance
-
-## 🌟 Best Practices
-
-Each file follows:
-- **Clear structure**: Organized sections
-- **Professional tone**: Academic/research context
-- **Actionable content**: Practical guidance
-- **Links and references**: Connected documentation
-- **Examples**: Real-world usage
+**Version:** 3.0.0 | **Date:** 2026-02-09
 
 ---
 
-**Note**: This structure supports both open-source collaboration and academic research rigor.
+## Directory Tree
 
-**Last Updated**: January 2025
+```
+auracelle-bach/
+│
+├── 📓 CHIA_PERFECT_02_09_26_AURACELLE_BACH_3_D_BEHAVIOR_AND_COGNITIVE_INTEGRATED.ipynb
+│       ↳ One-click Google Colab deployment notebook
+│         Generates all application files at runtime
+│         Launches Streamlit via pyngrok tunnel
+│
+├── 🐍 app.py
+│       ↳ Streamlit application entry point
+│         Password authentication (session state)
+│         Displays all 10 E-AGPO-HT enhancements on login screen
+│         Routes authenticated users to pages/simulation.py
+│
+├── 🐍 bach_api_utils.py
+│       ↳ Core mathematical intelligence engine (911 lines)
+│         Phase 2 API integration: OECD · Privacy International · ParlaMint
+│         All 10 mathematical enhancements as callable functions
+│         Static fallback datasets for offline operation
+│         LRU caching for performance
+│
+├── 🐍 moral_foundations.py
+│       ↳ Cognitive architecture: Haidt's Moral Foundations Theory (729 lines)
+│         Five foundations: Care · Fairness · Loyalty · Authority · Sanctity
+│         Cultural calibration per stakeholder nation
+│         Value-weighted policy scoring
+│
+├── 🐍 trust_dynamics.py
+│       ↳ Cognitive architecture: Ostrom/Axelrod cooperation models (781 lines)
+│         Institutional trust evolution and decay functions
+│         Reputation scoring and iterated game theory
+│         Multi-round negotiation simulation
+│
+├── 📋 requirements.txt
+│       ↳ Python dependencies with minimum version constraints
+│
+├── 📁 pages/
+│   │
+│   ├── 🐍 simulation.py            [1,387 lines]
+│   │       ↳ PRIMARY SIMULATION INTERFACE
+│   │         10 tabbed enhancement panels (E1–E10)
+│   │         12 international policy frameworks (7 binding + 5 voluntary)
+│   │         Multi-stakeholder country selection (15+ nations)
+│   │         Plotly interactive visualisations
+│   │
+│   ├── 🐍 visual_3d.py             [869 lines]
+│   │       ↳ 3D POLICY COORDINATION VISUALISATION
+│   │         Interactive 3D Plotly policy space
+│   │         Four scenario pathways: Fragmented · Convergence · Resistance · Optimal
+│   │         Real-time convergence animation
+│   │         15-country + IO multi-stakeholder network
+│   │
+│   ├── 🐍 cognitive_demo.py        [391 lines]
+│   │       ↳ COGNITIVE ARCHITECTURE DEMONSTRATION
+│   │         Interactive Moral Foundations profile builder
+│   │         Trust Dynamics scenario explorer
+│   │         Value-weighted decision output
+│   │
+│   ├── 🐍 cognitive_decision_science.py  [805 lines]
+│   │       ↳ FORMAL DECISION SCIENCE MODULE
+│   │         Decision-making under uncertainty (Bayesian)
+│   │         Reliability Coefficient (ρ_XX') calculation
+│   │         Standard Error of Measurement (SEM) analysis
+│   │         Confidence interval construction for governance scores
+│   │
+│   └── 🐍 institutional_behavior.py  [466 lines]
+│           ↳ INSTITUTIONAL BEHAVIOR ENGINE
+│             Bounded Rationality (Simon's satisficing)
+│             6 Cognitive Biases: status quo · confirmation · availability
+│                                  anchoring · loss aversion · groupthink
+│             Organisational Inertia Modelling
+│
+├── 📁 .devcontainer/
+│   └── devcontainer.json           ↳ VS Code Dev Container config
+│
+├── 📁 .github/
+│   ├── workflows/
+│   │   └── ci.yml                  ↳ CI/CD: lint, test, dependency audit
+│   └── ISSUE_TEMPLATE/
+│       ├── bug_report.md           ↳ Bug report template
+│       └── feature_request.md     ↳ Feature request template
+│
+└── 📄 Documentation
+    ├── README.md                   ↳ Primary project documentation
+    ├── CHANGELOG.md                ↳ Version history (v1.0.0 → v3.0.0)
+    ├── CITATION.cff                ↳ Academic citation metadata
+    ├── LICENSE                     ↳ MIT License
+    ├── CODE_OF_CONDUCT.md          ↳ Community standards
+    ├── CONTRIBUTING.md             ↳ Contribution guidelines
+    ├── SECURITY.md                 ↳ Security policy
+    ├── INSTALLATION.md             ↳ Setup instructions
+    ├── GITHUB_SETUP.md             ↳ Repository setup guide
+    ├── SETUP_CHECKLIST.md          ↳ Deployment checklist
+    ├── MASTER_FILE_LIST.md         ↳ Complete file inventory
+    ├── REPOSITORY_STRUCTURE.md    ↳ This file
+    ├── PULL_REQUEST_TEMPLATE.md    ↳ PR template
+    ├── bug_report.md               ↳ Issue template (root copy)
+    └── feature_request.md         ↳ Issue template (root copy)
+```
+
+---
+
+## Data Flow Architecture
+
+```
+Google Colab Notebook
+        │
+        ▼
+[pyngrok tunnel] ──────────────────────────────────────────────
+        │                                                       │
+        ▼                                                       ▼
+  app.py                                              External APIs
+  (Authentication)                              OECD · Privacy Int'l · ParlaMint
+        │                                                       │
+        ▼                                                       ▼
+  pages/simulation.py ◄──────────────────── bach_api_utils.py
+  (10 Enhancements)                         (Math Engine + API Cache)
+        │                                          │
+        ├──► moral_foundations.py                  │
+        ├──► trust_dynamics.py                     │
+        │                                          │
+        ▼                                          │
+  pages/visual_3d.py ◄───────────────────────────┘
+  pages/cognitive_demo.py
+  pages/cognitive_decision_science.py
+  pages/institutional_behavior.py
+```
+
+---
+
+## E-AGPO-HT Stratum Mapping
+
+| Stratum | Files | Components |
+|---------|-------|------------|
+| **III — g-GWC** | `pages/simulation.py` (Tab 10) | Cognitive Foresight & Strategic Analysis |
+| **II — BGC** | `bach_api_utils.py` (E1–E9) | STI · SAD · ESI · NDM · SRA · IIC · ASI |
+| **II — ACC AI** | `moral_foundations.py`, `trust_dynamics.py` | Cognitive architecture layer |
+| **I — NOF** | `pages/simulation.py` (E1–E9 tabs) | ~40 Narrow Operational Factors |
+
+---
+
+*© 2026 Auracelle AI Governance Labs / Grace A. Evans. E-AGPO-HT is proprietary IP.*
