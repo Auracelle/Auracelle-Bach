@@ -1,0 +1,151 @@
+name: Auracelle Bach CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    name: Lint, Type Check & Dependency Audit
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install flake8 pyflakes bandit
+
+    - name: Lint with flake8 (root Python files)
+      run: |
+        # Stop the build if there are Python syntax errors or undefined names
+        flake8 app.py bach_api_utils.py moral_foundations.py trust_dynamics.py \
+          --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Warn on complexity and style issues (don't fail)
+        flake8 app.py bach_api_utils.py moral_foundations.py trust_dynamics.py \
+          --count --exit-zero --max-complexity=15 --max-line-length=120 --statistics
+
+    - name: Lint with flake8 (pages/)
+      run: |
+        flake8 pages/ --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 pages/ --count --exit-zero --max-complexity=15 --max-line-length=120 --statistics
+
+    - name: Security audit with bandit
+      run: |
+        bandit -r . -x ./.git,./pages --severity-level medium --confidence-level medium -q || true
+
+    - name: Validate requirements.txt
+      run: |
+        pip check
+        echo "✅ Dependency compatibility verified"
+
+    - name: Check Python syntax (all files)
+      run: |
+        find . -name "*.py" -not -path "./.git/*" | xargs python -m pyflakes 2>&1 | head -50
+        echo "Syntax check complete"
+
+    - name: Verify Streamlit app structure
+      run: |
+        python -c "
+        import ast, sys
+        files = [
+            'app.py',
+            'bach_api_utils.py', 
+            'moral_foundations.py',
+            'trust_dynamics.py',
+            'pages/simulation.py',
+            'pages/visual_3d.py',
+            'pages/cognitive_demo.py',
+            'pages/cognitive_decision_science.py',
+            'pages/institutional_behavior.py'
+        ]
+        errors = []
+        for f in files:
+            try:
+                with open(f) as fh:
+                    ast.parse(fh.read())
+                print(f'✅ {f}')
+            except SyntaxError as e:
+                errors.append(f'❌ {f}: {e}')
+                print(f'❌ {f}: {e}')
+        if errors:
+            sys.exit(1)
+        print(f'All {len(files)} files passed AST validation')
+        "
+
+  notebook-check:
+    runs-on: ubuntu-latest
+    name: Notebook Validation
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install nbformat
+      run: pip install nbformat
+
+    - name: Validate notebook JSON structure
+      run: |
+        python -c "
+        import nbformat, glob, sys
+        notebooks = glob.glob('*.ipynb')
+        for nb_path in notebooks:
+            with open(nb_path) as f:
+                nb = nbformat.read(f, as_version=4)
+            print(f'✅ {nb_path}: {len(nb.cells)} cells, nbformat {nb.nbformat}.{nb.nbformat_minor}')
+        print(f'Validated {len(notebooks)} notebook(s)')
+        "
+
+  documentation-check:
+    runs-on: ubuntu-latest
+    name: Documentation Completeness
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Verify required documentation files
+      run: |
+        required_files=(
+          "README.md"
+          "CHANGELOG.md"
+          "CITATION.cff"
+          "LICENSE"
+          "CODE_OF_CONDUCT.md"
+          "CONTRIBUTING.md"
+          "SECURITY.md"
+          "INSTALLATION.md"
+          "MASTER_FILE_LIST.md"
+          "REPOSITORY_STRUCTURE.md"
+        )
+        missing=()
+        for f in "${required_files[@]}"; do
+          if [ -f "$f" ]; then
+            echo "✅ $f"
+          else
+            echo "❌ MISSING: $f"
+            missing+=("$f")
+          fi
+        done
+        if [ ${#missing[@]} -gt 0 ]; then
+          echo "Missing ${#missing[@]} required documentation file(s)"
+          exit 1
+        fi
+        echo "All required documentation files present"
